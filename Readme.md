@@ -1,4 +1,4 @@
-# 🚀 Zero Move
+# 🚀 MoveVM
 
 <div align="center">
 
@@ -14,9 +14,9 @@
 
 ## 🎯 Overview
 
-**Zero Move** is a revolutionary web-based IDE that eliminates the complexity of blockchain development. It provides a seamless, intuitive interface for Web2 developers to enter the Movement Network ecosystem without needing to learn command-line tools or complex blockchain concepts.
+**MoveVM** is a revolutionary web-based IDE that eliminates the complexity of blockchain development. It provides a seamless, intuitive interface for Web2 developers to enter the Movement Network ecosystem without needing to learn command-line tools or complex blockchain concepts.
 
-### What Makes Zero Move Special?
+### What Makes MoveVM Special?
 
 - **🎨 Modern Web IDE**: Full-featured code editor with syntax highlighting and file management
 - **🤖 AI-Powered Code Generation**: Generate Move smart contracts using natural language descriptions
