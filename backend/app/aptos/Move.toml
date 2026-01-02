@@ -1,0 +1,16 @@
+[package]
+name = "PredefinedSumContract"
+version = "1.0.0"
+authors = []
+
+[addresses]
+pred = "0xda27acc6998b584a4fcd3d87a5c0f818c784b59b2d47b49fee403f39e54a789c"
+std = "0x1"
+[dev-addresses]
+
+[dependencies.MoveStdlib]
+git = "https://github.com/move-language/move.git"
+rev = "main"
+subdir = "language/move-stdlib"
+
+[dev-dependencies]  
