@@ -125,15 +125,15 @@ function HomePage() {
             viewport={{ once: true }}
             className="relative rounded-2xl overflow-hidden"
           >
-            <video 
+            <iframe
               className="w-full aspect-video"
-              controls
-              preload="metadata"
-              autoPlay
-            >
-              <source src="/src/assets/moveVM-demo-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              src="https://www.youtube.com/embed/y2kZ998O1E8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&showinfo=0"
+              title="MoveVM Demo"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+
           </motion.div>
         </div>
       </section>
