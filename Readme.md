@@ -12,6 +12,14 @@
 
 </div>
 
+<div align="center">
+
+[![MoveVM Demo](https://img.youtube.com/vi/y2kZ998O1E8/maxresdefault.jpg)](https://www.youtube.com/watch?v=y2kZ998O1E8)
+
+▶ **Watch the MoveVM Demo**
+
+</div>
+
 ## 🎯 Overview
 
 **MoveVM** is a revolutionary web-based IDE that eliminates the complexity of blockchain development. It provides a seamless, intuitive interface for Web2 developers to enter the Movement Network ecosystem without needing to learn command-line tools or complex blockchain concepts.
