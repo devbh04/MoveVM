@@ -12,7 +12,7 @@ export const FloatingShapes: React.FC = () => {
             i % 3 === 0 
               ? 'bg-cyan-400/20' 
               : i % 3 === 1 
-              ? 'bg-purple-400/20' 
+              ? 'bg-yellow-400/20' 
               : 'bg-pink-400/20'
           } rounded-full`}
           animate={{

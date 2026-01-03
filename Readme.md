@@ -8,7 +8,7 @@
 
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/react-19.1.0-blue.svg)](https://reactjs.org/)
-[![Movement Network](https://img.shields.io/badge/network-Movement-purple.svg)](https://movementnetwork.xyz)
+[![Movement Network](https://img.shields.io/badge/network-Movement-yellow.svg)](https://movementnetwork.xyz)
 
 </div>
 

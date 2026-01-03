@@ -115,7 +115,7 @@ export default function DashboardPage() {
     const variants: Record<string, { label: string; className: string }> = {
       created: { label: 'Created', className: 'bg-neutral-700 text-neutral-300' },
       initialized: { label: 'Initialized', className: 'bg-blue-600/20 text-blue-400 border-blue-500/50' },
-      compiled: { label: 'Compiled', className: 'bg-purple-600/20 text-purple-400 border-purple-500/50' },
+      compiled: { label: 'Compiled', className: 'bg-yellow-600/20 text-yellow-400 border-yellow-500/50' },
       deployed: { label: 'Deployed', className: 'bg-emerald-600/20 text-emerald-400 border-emerald-500/50' }
     };
 
@@ -138,11 +138,11 @@ export default function DashboardPage() {
         <div className="px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-linear-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
                 <Folder className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold text-yellow-400">
                   Project Dashboard
                 </h1>
                 <p className="text-xs text-neutral-400 font-mono">Manage your Move contracts</p>
@@ -152,7 +152,7 @@ export default function DashboardPage() {
           
           <Button 
             onClick={() => setIsCreating(true)}
-            className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500"
+            className="bg-linear-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500"
           >
             <Plus className="w-4 h-4 mr-2" />
             New Project
@@ -217,7 +217,7 @@ export default function DashboardPage() {
             {!searchQuery && (
               <Button 
                 onClick={() => setIsCreating(true)}
-                className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500"
+                className="bg-linear-to-r from-blue-600 to-yellow-600 hover:from-blue-500 hover:to-yellow-500"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create Project
@@ -232,7 +232,7 @@ export default function DashboardPage() {
                 className="bg-neutral-900 border-neutral-800 hover:border-neutral-700 transition-all cursor-pointer group"
                 onClick={() => openProject(project._id)}
               >
-                <CardHeader className="pb-3">
+                <CardHeader className="">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <CardTitle className="text-lg text-neutral-200 mb-2 flex items-center group-hover:text-blue-400 transition-colors">
@@ -264,7 +264,7 @@ export default function DashboardPage() {
                   </div>
 
                   {/* Progress Indicators */}
-                  <div className="space-y-2">
+                  <div className="flex items-center space-x-4">
                     {project.initData && (
                       <div className="flex items-center text-xs text-emerald-400">
                         <CheckCircle2 className="w-3 h-3 mr-2" />
@@ -289,7 +289,7 @@ export default function DashboardPage() {
                             className="ml-auto text-blue-400 hover:text-blue-300"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <ExternalLink className="w-3 h-3" />
+                            <ExternalLink className="w-3 h-3 ml-4" />
                           </a>
                         )}
                       </div>

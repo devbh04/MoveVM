@@ -66,9 +66,9 @@ export default function DeploymentHistoryPanel() {
       case 'init':
         return 'bg-blue-600/20 text-blue-400 border-blue-500/30';
       case 'compile':
-        return 'bg-purple-600/20 text-purple-400 border-purple-500/30';
+        return 'bg-yellow-600/20 text-yellow-400 border-yellow-500/30';
       case 'deploy':
-        return 'bg-violet-600/20 text-violet-400 border-violet-500/30';
+        return 'bg-amber-600/20 text-amber-400 border-amber-500/30';
       default:
         return 'bg-slate-600/20 text-slate-400 border-slate-500/30';
     }
@@ -192,7 +192,7 @@ export default function DeploymentHistoryPanel() {
                     <div className="space-y-2">
                       <label className="text-xs text-slate-500 uppercase">Explorer Links</label>
                       {entry.data.explorerUrls.account && (
-                        <Button variant="outline" size="sm" asChild className="w-full border-slate-700 text-slate-300 hover:bg-violet-500/10">
+                        <Button variant="outline" size="sm" asChild className="w-full border-slate-700 text-slate-300 hover:bg-amber-500/10">
                           <a href={entry.data.explorerUrls.account} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-3 h-3 mr-2" />
                             View Account
@@ -200,7 +200,7 @@ export default function DeploymentHistoryPanel() {
                         </Button>
                       )}
                       {entry.data.explorerUrls.transaction && (
-                        <Button variant="outline" size="sm" asChild className="w-full border-slate-700 text-slate-300 hover:bg-violet-500/10">
+                        <Button variant="outline" size="sm" asChild className="w-full border-slate-700 text-slate-300 hover:bg-amber-500/10">
                           <a href={entry.data.explorerUrls.transaction} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-3 h-3 mr-2" />
                             View Transaction

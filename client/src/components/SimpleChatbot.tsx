@@ -254,7 +254,7 @@ Generate Move code based on the above request. Remember: ONLY Move code, no expl
             <Card className="w-full max-w-5xl h-[85vh] flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 border-cyan-500/20 shadow-2xl shadow-cyan-500/5">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b border-slate-800">
                     <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center animate-pulse-slow">
+                        <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 via-blue-500 to-yellow-600 rounded-xl flex items-center justify-center animate-pulse-slow">
                             <Bot className="w-6 h-6 text-white" />
                         </div>
                         <div>

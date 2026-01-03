@@ -3,7 +3,7 @@ import { useSearchParams, useNavigate } from "react-router-dom"
 import { Button } from "../components/ui/button"
 import { Code, ArrowLeft, Bot } from "lucide-react"
 import FileExplorer from "../components/file-explorer"
-import CodeEditor from "../components/code-editor"
+import CodeEditor from "../components/code-editor-enhanced"
 import DeploymentPanelV2 from "../components/deployment-panel-v2"
 import DeploymentHistoryPanel from "../components/deployment-history"
 import { useBuilderStore } from "../store/builderStore"
@@ -66,7 +66,7 @@ export default function BuilderPage() {
             </Button>
             
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-linear-to-r from-violet-600 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-violet-500/20">
+              <div className="w-9 h-9 bg-amber-600 rounded-lg flex items-center justify-center shadow-lg shadow-amber-500/20">
                 <Code className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -83,7 +83,7 @@ export default function BuilderPage() {
               variant="default" 
               size="sm"
               onClick={() => setIsChatbotOpen(!isChatbotOpen)}
-              className="text-violet-400 hover:bg-violet-500/10 hover:text-violet-300"
+              className="text-amber-400 hover:bg-amber-500/10 hover:text-amber-300"
             >
               <Bot className="w-4 h-4" />
             </Button>
@@ -115,7 +115,7 @@ export default function BuilderPage() {
                 className={`absolute top-1 bottom-1 w-[calc(50%-4px)] bg-linear-to-r transition-all duration-300 rounded-md ${
                   showHistory 
                     ? 'left-[calc(50%+2px)] from-blue-600 to-blue-700' 
-                    : 'left-1 from-violet-600 to-violet-700'
+                    : 'left-1 from-amber-600 to-amber-700'
                 }`}
               />
             </div>

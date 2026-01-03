@@ -97,7 +97,7 @@ export const FloatingElements: React.FC = () => {
         'text-pink-400', 
         'text-yellow-400',
         'text-green-400',
-        'text-purple-400',
+        'text-yellow-400',
         'text-orange-400'
       ][Math.floor(Math.random() * 6)]
     }));

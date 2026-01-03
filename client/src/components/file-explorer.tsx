@@ -230,7 +230,7 @@ export default function FileExplorer() {
 
   const getFileIcon = (fileName: string, type: string) => {
     if (type === 'config') return <Settings className="w-4 h-4 text-orange-400" />;
-    if (fileName.endsWith('.move')) return <FileCode className="w-4 h-4 text-violet-400" />;
+    if (fileName.endsWith('.move')) return <FileCode className="w-4 h-4 text-amber-400" />;
     if (fileName.endsWith('.mv')) return <File className="w-4 h-4 text-blue-400" />;
     if (fileName.endsWith('.yaml') || fileName.endsWith('.toml')) return <FileText className="w-4 h-4 text-yellow-400" />;
     return <File className="w-4 h-4 text-slate-400" />;
@@ -305,7 +305,7 @@ export default function FileExplorer() {
         className={`
           group flex items-center justify-between px-3 py-2 rounded-md transition-all
           ${isActive
-            ? 'bg-gradient-to-r from-violet-600/20 to-blue-600/20 border border-violet-500/30 text-violet-300'
+            ? 'bg-gradient-to-r from-amber-600/20 to-blue-600/20 border border-amber-500/30 text-amber-300'
             : file.readOnly
             ? 'text-slate-500 hover:bg-slate-800/30 cursor-not-allowed'
             : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 cursor-pointer'
@@ -429,7 +429,7 @@ export default function FileExplorer() {
               variant="ghost"
               size="sm"
               onClick={() => setIsCreating(true)}
-              className="h-7 w-7 p-0 text-slate-400 hover:text-violet-400 hover:bg-violet-500/10"
+              className="h-7 w-7 p-0 text-slate-400 hover:text-amber-400 hover:bg-amber-500/10"
               title="New file"
             >
               <Plus className="w-4 h-4" />
@@ -456,7 +456,7 @@ export default function FileExplorer() {
             <Button
               size="sm"
               onClick={handleCreateFile}
-              className="h-7 px-2 bg-violet-600 hover:bg-violet-700"
+              className="h-7 px-2 bg-amber-600 hover:bg-amber-700"
             >
               <Check className="w-3 h-3" />
             </Button>

@@ -19,9 +19,9 @@ export const Logo: React.FC = () => {
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-2 rounded-full border border-purple-500/30"
+          className="absolute inset-2 rounded-full border border-yellow-500/30"
         />
-        <div className="relative w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+        <div className="relative w-20 h-20 bg-gradient-to-br from-cyan-500 to-yellow-600 rounded-2xl flex items-center justify-center shadow-2xl">
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

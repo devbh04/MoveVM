@@ -148,7 +148,7 @@ export default function CodeEditor({ onCodeChange }: CodeEditorProps) {
             variant="ghost"
             size="sm"
             onClick={copyCode}
-            className="h-7 px-3 text-xs text-slate-400 hover:text-violet-400 hover:bg-violet-500/10"
+            className="h-7 px-3 text-xs text-slate-400 hover:text-amber-400 hover:bg-amber-500/10"
           >
             <Copy className="w-3 h-3 mr-1" />
             Copy
@@ -185,7 +185,7 @@ export default function CodeEditor({ onCodeChange }: CodeEditorProps) {
               onChange={handleCodeChange}
               onScroll={handleScroll}
               readOnly={currentFile === 'Move.toml'}
-              className={`absolute inset-0 w-full h-full p-4 bg-transparent text-slate-200 font-mono text-sm leading-6 resize-none focus:outline-none caret-violet-400 ${
+              className={`absolute inset-0 w-full h-full p-4 bg-transparent text-slate-200 font-mono text-sm leading-6 resize-none focus:outline-none caret-amber-400 ${
                 currentFile === 'Move.toml' ? 'cursor-not-allowed opacity-80' : ''
               }`}
               style={{

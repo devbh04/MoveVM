@@ -14,11 +14,11 @@ interface Block {
 }
 
 const colors = [
-  'bg-gradient-to-br from-pink-500/20 to-purple-600/20',
+  'bg-gradient-to-br from-pink-500/20 to-yellow-600/20',
   'bg-gradient-to-br from-cyan-400/20 to-blue-500/20',
   'bg-gradient-to-br from-yellow-400/20 to-orange-500/20',
   'bg-gradient-to-br from-green-400/20 to-emerald-500/20',
-  'bg-gradient-to-br from-purple-500/20 to-indigo-600/20',
+  'bg-gradient-to-br from-yellow-500/20 to-indigo-600/20',
   'bg-gradient-to-br from-red-400/20 to-pink-500/20',
 ];
 

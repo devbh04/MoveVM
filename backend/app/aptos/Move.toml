@@ -1,10 +1,10 @@
 [package]
-name = "PredefinedSumContract"
+name = "Counter"
 version = "1.0.0"
 authors = []
 
 [addresses]
-pred = "0xda27acc6998b584a4fcd3d87a5c0f818c784b59b2d47b49fee403f39e54a789c"
+count = "0x1bcaee95ba8474d07f1f678b920d309f8d62722d9aa3e48d6f94ae35d8e49e77"
 std = "0x1"
 [dev-addresses]
 
@@ -13,4 +13,4 @@ git = "https://github.com/move-language/move.git"
 rev = "main"
 subdir = "language/move-stdlib"
 
-[dev-dependencies]  
+[dev-dependencies]

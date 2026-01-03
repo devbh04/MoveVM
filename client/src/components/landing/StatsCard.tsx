@@ -19,7 +19,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({ value, label, delay }) => 
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: delay + 0.2, type: "spring", stiffness: 200 }}
-        className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2"
+        className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-yellow-400 bg-clip-text text-transparent mb-2"
       >
         {value}
       </motion.div>

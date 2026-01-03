@@ -21,7 +21,7 @@ export const RetroButton: React.FC<RetroButtonProps> = ({
 }) => {
   const variants = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-cyan-500/25',
-    secondary: 'bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white shadow-pink-500/25',
+    secondary: 'bg-gradient-to-r from-pink-500 to-yellow-600 hover:from-pink-400 hover:to-yellow-500 text-white shadow-pink-500/25',
     accent: 'bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 shadow-yellow-500/25'
   };
 

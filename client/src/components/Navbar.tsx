@@ -81,21 +81,21 @@ const Navbar: React.FC = () => {
         }}
       >
         {/* Enhanced decorative gradient overlay */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-60"></div>
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-500/10 via-blue-500/10 to-teal-500/10 opacity-60"></div>
         
         <div className="relative flex items-center justify-between">
           {/* Enhanced Logo */}
           <div className="flex items-center space-x-3">
-            <div className={`relative rounded-2xl bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300 group ${
+            <div className={`relative rounded-2xl bg-gradient-to-br from-yellow-500 to-blue-600 flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300 group ${
               isBuilderPage ? 'w-6 h-6' : 'w-10 h-10' // Half size on builder page
             }`}>
               <span className={`text-white font-bold relative z-10 ${
                 isBuilderPage ? 'text-sm' : 'text-lg' // Smaller text on builder page
               }`}>R</span>
               {/* Glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-600 opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-yellow-500 to-blue-600 opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-300"></div>
             </div>
-            <span className={`font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent ${
+            <span className={`font-bold bg-gradient-to-r from-yellow-600 to-blue-600 bg-clip-text text-transparent ${
               isBuilderPage ? 'text-base' : 'text-xl' // Smaller text on builder page
             }`}>
               RiseIn
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
                 }`}></div>
                 
                 {/* Bottom accent line */}
-                <div className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full transition-all duration-300 ${
+                <div className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-blue-400 rounded-full transition-all duration-300 ${
                   isBuilderPage ? 'h-0.25' : 'h-0.5' // Thinner line on builder page
                 } ${
                   hoveredItem === index ? 'w-1/2 opacity-100' : 'w-0 opacity-0'
@@ -147,17 +147,17 @@ const Navbar: React.FC = () => {
             }`}
           >
             <div className={`${isBuilderPage ? 'space-y-0.5' : 'space-y-1.5'}`}>
-              <div className={`bg-gray-700 transition-all duration-300 group-hover:bg-purple-600 ${
+              <div className={`bg-gray-700 transition-all duration-300 group-hover:bg-yellow-600 ${
                 isBuilderPage ? 'w-3 h-0.25' : 'w-5 h-0.5' // Half size on builder page
               } ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
               }`}></div>
-              <div className={`bg-gray-700 transition-all duration-300 group-hover:bg-purple-600 ${
+              <div className={`bg-gray-700 transition-all duration-300 group-hover:bg-yellow-600 ${
                 isBuilderPage ? 'w-3 h-0.25' : 'w-5 h-0.5' // Half size on builder page
               } ${
                 isMobileMenuOpen ? 'opacity-0' : ''
               }`}></div>
-              <div className={`bg-gray-700 transition-all duration-300 group-hover:bg-purple-600 ${
+              <div className={`bg-gray-700 transition-all duration-300 group-hover:bg-yellow-600 ${
                 isBuilderPage ? 'w-3 h-0.25' : 'w-5 h-0.5' // Half size on builder page
               } ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
@@ -184,19 +184,19 @@ const Navbar: React.FC = () => {
                   isBuilderPage ? 'text-sm' : 'text-lg' // Smaller text on builder page
                 }`}>{item}</span>
                 {/* Hover background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 {/* Left accent line */}
-                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-0 bg-gradient-to-b from-purple-500 to-blue-500 rounded-full group-hover:h-3/4 transition-all duration-300"></div>
+                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-0 bg-gradient-to-b from-yellow-500 to-blue-500 rounded-full group-hover:h-3/4 transition-all duration-300"></div>
               </button>
             ))}
-            <button className={`w-full rounded-xl bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold shadow-lg relative overflow-hidden group ${
+            <button className={`w-full rounded-xl bg-gradient-to-r from-yellow-500 to-blue-600 text-white font-semibold shadow-lg relative overflow-hidden group ${
               isBuilderPage ? 'mt-2 px-2 py-1.5' : 'mt-4 px-4 py-3' // Half spacing and padding on builder page
             }`}>
               <span className={`relative z-10 tracking-wide ${
                 isBuilderPage ? 'text-sm' : 'text-base' // Smaller text on builder page
               }`}>Get Started</span>
               {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               {/* Shimmer effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </button>
@@ -205,10 +205,10 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Enhanced floating particles effect - smaller on builder page */}
-      <div className={`absolute -top-2 -left-2 rounded-full bg-purple-400/30 animate-pulse ${
+      <div className={`absolute -top-2 -left-2 rounded-full bg-yellow-400/30 animate-pulse ${
         isBuilderPage ? 'w-2 h-2' : 'w-4 h-4' // Half size on builder page
       }`}>
-        <div className="absolute inset-0 rounded-full bg-purple-400/20 animate-ping"></div>
+        <div className="absolute inset-0 rounded-full bg-yellow-400/20 animate-ping"></div>
       </div>
       <div className={`absolute -bottom-2 -right-2 rounded-full bg-blue-400/30 animate-pulse delay-1000 ${
         isBuilderPage ? 'w-1.5 h-1.5' : 'w-3 h-3' // Half size on builder page

@@ -1,4 +1,4 @@
-module pred::PredefinedSumContract {
+module sum::PredefinedSumContract {
     use std::signer;
     use std::error;
 
