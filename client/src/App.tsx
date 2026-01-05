@@ -9,7 +9,7 @@ import { ModernBackground } from './components/landing/ModernBackground';
 
 function HomePage() {
   const navigate = useNavigate();
-  const initType = "github"; // or "dashboard"
+  const initType = "dashboard"; // or "github"
 
   return (
     <div className="min-h-screen bg-gray-950 text-white relative overflow-hidden">
