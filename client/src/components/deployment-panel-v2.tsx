@@ -21,7 +21,7 @@ import { useBuilderStore } from '../store/builderStore';
 import { getApiUrl } from '../lib/config';
 
 // Environment mode: 'local' or 'production'
-const ENVIRONMENT_MODE: 'local' | 'production' = 'local';
+const ENVIRONMENT_MODE: 'local' | 'production' = import.meta.env.VITE_ENVIRONMENT as 'local' | 'production' || 'local';
 
 interface DeploymentPanelV2Props {
   isChatbotOpen?: boolean;
