@@ -8,6 +8,7 @@ import DeploymentPanelV2 from "../components/deployment-panel-v2"
 import DeploymentHistoryPanel from "../components/deployment-history"
 import { useBuilderStore } from "../store/builderStore"
 import { getApiUrl } from "../lib/config"
+import EnvironmentIndicator from "../components/EnvironmentIndicator"
 
 export default function BuilderPage() {
   const [searchParams] = useSearchParams()
@@ -80,6 +81,8 @@ export default function BuilderPage() {
           </div>
           
           <div className="flex items-center space-x-2">
+            <EnvironmentIndicator />
+            
             <Button 
               variant="default" 
               size="sm"

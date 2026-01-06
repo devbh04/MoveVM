@@ -13,6 +13,8 @@ import { connectDB, Project } from "./db.js";
 const execPromise = util.promisify(exec);
 
 const app = express();
+// Environment detection
+const IS_PRODUCTION = process.env.NODE_ENV === 'production' || process.env.VERCEL === '1';
 // Use environment variable or default to local path for development
 // Note: Directory can be named "aptos" or "movement" - Movement CLI will create .movement config directory inside
 const MOVEMENT_DIR = process.env.MOVEMENT_DIR || path.join(process.cwd(), "app", "aptos");
@@ -120,11 +122,31 @@ app.get("/projects/:id", async (req, res) => {
 app.post("/projects", async (req, res) => {
   try {
     const { name } = req.body;
+    
+    // Default Move code template
+    const defaultMoveCode = `module MyProject::main {
+    use std::signer;
+    
+    // A simple example struct
+    struct Message has key {
+        text: vector<u8>
+    }
+    
+    // Initialize the module
+    public entry fun init(account: &signer) {
+        let msg = Message {
+            text: b"Hello, Movement!"
+        };
+        move_to(account, msg);
+    }
+}
+`;
+    
     const project = new Project({ 
       name,
       files: [{
         name: 'project.move',
-        content: '',
+        content: defaultMoveCode,
         path: 'sources',
         type: 'source',
         readOnly: false,
@@ -299,6 +321,11 @@ app.get("/projects/:id/sync-files", async (req, res) => {
       return res.status(404).json({ success: false, error: "Project not found" });
     }
     
+    // In production, just return files from MongoDB without filesystem access
+    if (IS_PRODUCTION) {
+      return res.json({ success: true, files: project.files || [] });
+    }
+    
     const syncedFiles = [];
     
     // Read source files
@@ -382,6 +409,15 @@ app.get("/projects/:id/sync-files", async (req, res) => {
 
 app.post("/init", async (req, res) => {
   try {
+    // In production, VM operations are not available
+    if (IS_PRODUCTION) {
+      return res.status(503).json({
+        success: false,
+        error: "Virtual machine operations are not available in production. Please see the demo video.",
+        isProduction: true
+      });
+    }
+    
     const { privateKey, networkType = "testnet", projectId, moveCode } = req.body; // Get privateKey and networkType from request body
     // Store in a variable for later use
     let userPrivateKey = privateKey || "";
@@ -771,6 +807,15 @@ app.get("/remove-movement", async (req, res) => {
 });
 
 app.post("/compile", async (req, res) => {
+  // In production, VM operations are not available
+  if (IS_PRODUCTION) {
+    return res.status(503).json({
+      success: false,
+      error: "Virtual machine operations are not available in production. Please see the demo video.",
+      isProduction: true
+    });
+  }
+  
   const { moveCode, projectId } = req.body;
 
   if (!moveCode) {
@@ -935,6 +980,15 @@ app.post("/compile", async (req, res) => {
 });
 
 app.post("/deploy", async (req, res) => {
+  // In production, VM operations are not available
+  if (IS_PRODUCTION) {
+    return res.status(503).json({
+      success: false,
+      error: "Virtual machine operations are not available in production. Please see the demo video.",
+      isProduction: true
+    });
+  }
+  
   const { moveCode, projectId } = req.body;
 
   if (!moveCode) {
@@ -1338,6 +1392,20 @@ app.get("/projects/:id/history", async (req, res) => {
   }
 });
 
+// Environment status endpoint
+app.get("/status", (req, res) => {
+  res.json({
+    success: true,
+    environment: IS_PRODUCTION ? 'production' : 'local',
+    vmAvailable: !IS_PRODUCTION,
+    message: IS_PRODUCTION 
+      ? 'Running in production mode - VM operations disabled, using MongoDB only'
+      : 'Running in local mode - Full VM and filesystem access available'
+  });
+});
+
 app.listen(3000, () => {
   console.log("Movement Network backend is running at http://localhost:3000");
+  console.log(`Environment: ${IS_PRODUCTION ? 'PRODUCTION' : 'LOCAL'}`);
+  console.log(`VM Operations: ${IS_PRODUCTION ? 'DISABLED' : 'ENABLED'}`);
 });
