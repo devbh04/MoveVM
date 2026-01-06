@@ -22,6 +22,7 @@ import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
 import { Badge } from './ui/badge';
 import { useBuilderStore } from '../store/builderStore';
+import { getApiUrl } from '../lib/config';
 
 interface FileItem {
   name: string;

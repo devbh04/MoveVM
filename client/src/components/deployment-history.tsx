@@ -11,6 +11,7 @@ import {
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { useSearchParams } from 'react-router-dom';
+import { getApiUrl } from '../lib/config';
 
 // Simple date formatter (date-fns alternative)
 const formatDate = (date: Date) => {
